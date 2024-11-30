@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #007BFF;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr.win {
+            background-color: #d4edda; /* Green for Win */
+        }
+        tr.lose {
+            background-color: #f8d7da; /* Red for Lose */
+        }
+        tr.draw {
+            background-color: #fff3cd; /* Yellow for Draw */
+        }
+        a {
+            display: inline-block;
+            margin: 20px 0;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Your Match History</h2>
+    <table>
+        <tr>
+            <th>Match Date</th>
+            <th>Team 1 Score</th>
+            <th>Team 2 Score</th>
+            <th>Result</th>
+        </tr>
+        {% for match in matches %}
+        <tr class="{{ match.result|lower }}">
+            <td>{{ match.match_date.strftime('%Y-%m-%d') }}</td>
+            <td>{{ match.score_team_1 }}</td>
+            <td>{{ match.score_team_2 }}</td>
+            <td>{{ match.result }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/menu">Back to Menu</a>
+</body>
+</html>

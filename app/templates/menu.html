@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Game!</h1>
+    </header>
+    <main>
+        <p>What would you like to do?</p>
+        <ul>
+            <li>
+                <a href="/trade">Go to Trade</a>
+                <p>View and purchase players from the marketplace.</p>
+            </li>
+            <li>
+                <a href="/sell_player">Sell a Player</a>
+                <p>List one of your players on the marketplace for sale.</p>
+            </li>
+            <li>
+                <a href="/match">Go to Match</a>
+                <p>Compete in a match against another player.</p>
+            </li>
+            <li>
+                <a href="/change_lineup">Change Lineup</a>
+                <p>Update your current match lineup.</p>
+            </li>
+            <li>
+                <a href="/match_history">Go to Match History</a>
+                <p>Review your previous match results.</p>
+            </li>
+        </ul>
+        <a href="/logout" style="color: red;">Logout</a>
+    </main>
+    <footer>
+        <p>Game Platform &copy; 2024</p>
+    </footer>
+</body>
+</html>
+

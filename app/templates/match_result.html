@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 15px 0;
+        }
+        .match-info {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+        .match-info p {
+            font-size: 1rem;
+            color: #333;
+            margin: 5px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .back-btn {
+            font-weight: bold;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background-color: #003c75;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Match Result</h2>
+        <div class="match-info">
+            <p><strong>Match Against:</strong> {{ opponent.username }}</p>
+            <p><strong>Score:</strong> {{ score_team_1 }} - {{ score_team_2 }}</p>
+        </div>
+        <a href="/menu" class="back-btn">Back to Menu</a>
+    </div>
+</body>
+</html>
